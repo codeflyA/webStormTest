@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import {ref} from "vue";
-import {ElTree} from "element-plus";
-
+import {ElTree,ElTreeV2} from "element-plus";
 const personnelTreeRef = ref<InstanceType<typeof ElTree>>()
 const defaultProps = {
   children: 'children',
@@ -14,6 +13,18 @@ function handleNodeClick() {
 
 function loadNode() {
 }
+const list = ['a', 'b', 'c', 'd']
+
+const isCheckAll = ref(false);
+const checkedResult = ref(['a', 'b', 'd']);
+const isIndeterminate = ref(true);
+
+const checkAllChange = (val: boolean) => {
+  checkedResult.value = val ? list : []
+  isIndeterminate.value = false
+}
+
+
 </script>
 
 <template>
@@ -26,6 +37,13 @@ function loadNode() {
       @node-click="handleNodeClick"
   >
   </el-tree>
+  <van-checkbox
+      v-model="isCheckAll"
+      :indeterminate="isIndeterminate"
+      @change="checkAllChange"
+  >
+    全选
+  </van-checkbox>
 </template>
 
 <style scoped>
