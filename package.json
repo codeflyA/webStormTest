@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.29",
+    "axios": "^1.7.2",
     "element-plus": "^2.7.3",
-    "vant": "^4.9.1"
+    "vant": "^4.9.1",
+    "vue": "^3.4.29"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

@@ -1,13 +1,18 @@
 {
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*",
+    "src/assets/svg/index.ts",
+    "src/vitePlugins/**/*"
+  ],
   "compilerOptions": {
     "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "noEmit": true
-  },
-  "include": ["vite.config.ts"]
+    "types": ["node"],
+    "moduleResolution": "node"
+  }
 }
