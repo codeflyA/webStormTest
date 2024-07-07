@@ -42,7 +42,7 @@ const checkAllChange = (val: boolean) => {
       :indeterminate="isIndeterminate"
       @change="checkAllChange"
   >
-    全选
+    123
   </van-checkbox>
 </template>
 
