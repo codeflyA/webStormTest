@@ -1,0 +1,32 @@
+{
+	"name": "BaiDuFaceVerifyPlugin",
+	"id": "BaiDuFaceVerifyPlugin",
+	"version": "1.0.0",
+	"description": "至正人脸认证插件",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"ios": {
+			"plugins": [{
+				"type": "module",
+				"name": "BaiDuFaceVerifyModule",
+				"class": "TestModule"
+			}],
+			"hooksClass": "TestPluginProxy",
+			"frameworks": ["IDLFaceSDK.framework"],
+			"resources": [
+				"idl-key.face-ios",
+				"idl-license.face-ios",
+				"com.baidu.idl.face.faceSDK.bundle",
+				"com.baidu.idl.face.live.action.image.bundle",
+				"com.baidu.idl.face.model.faceSDK.bundle",
+				"BDFaceParamsConfig.json"
+			],
+			"privacies": [
+				"NSCameraUsageDescription",
+				"NSPhotoLibraryUsageDescription"
+			],
+			"integrateType": "library",
+			"deploymentTarget": "9.0"
+		}
+	}
+}

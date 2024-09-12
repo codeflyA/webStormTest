@@ -1,0 +1,141 @@
+{
+  "pages": [
+    {
+      "path": "pages/login/PermissionJudgment",
+      "type": "home",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/coach/coachHome",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/learnDrive/index",
+      "type": "page"
+    },
+    {
+      "path": "pages/login/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "手机登录"
+      }
+    },
+    {
+      "path": "pages/login/privacy",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "隐私政策"
+      }
+    },
+    {
+      "path": "pages/login/RealNameAuthen",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "实名认证"
+      }
+    },
+    {
+      "path": "pages/login/termsUse",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "产品使用协议"
+      }
+    },
+    {
+      "path": "pages/student/StudentHome",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/learnDrive/driveSchoolDetail/driveSchoolDetail",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "驾校详情"
+      }
+    },
+    {
+      "path": "pages/learnDrive/onlineSignUp/onlineSignUp",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/physicalExamination/hospitalDetail",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/physicalExamination/hospitalList",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/serviceEvaluation/serviceEvaluation",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/volumeUp/volumeUp",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/driveSchoolDetail/component/carType",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/driveSchoolDetail/component/Coach",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/driveSchoolDetail/component/Comment",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/driveSchoolDetail/component/introduce",
+      "type": "page"
+    },
+    {
+      "path": "pages/learnDrive/driveSchoolDetail/component/site",
+      "type": "page"
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "devTools/page",
+      "pages": [
+        {
+          "path": "index",
+          "style": {
+            "navigationStyle": "custom",
+            "softinputMode": "adjustResize",
+            "backgroundColor": "transparent",
+            "animationDuration": 1,
+            "animationType": "none",
+            "popGesture": "none",
+            "bounce": "none",
+            "titleNView": false
+          }
+        }
+      ]
+    }
+  ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+    }
+  },
+  "globalStyle": {
+    "pageOrientation": "portrait",
+    "navigationBarTitleText": "温州学考一件事",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff",
+    "backgroundColorTop": "#F4F5F6",
+    "backgroundColorBottom": "#F4F5F6"
+  }
+}

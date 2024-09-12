@@ -1,0 +1,52 @@
+import {
+	getAppContext
+} from "io.dcloud.uts.android";
+import ZZFacade from "com.miaxis.faceverify.ZZFacade";
+import ZZFacadeBuilder from "com.miaxis.faceverify.ZZFacadeBuilder";
+import ZZCallback from "com.miaxis.faceverify.api.ZZCallback";
+import ZZResponse from "com.miaxis.faceverify.api.ZZResponse";
+
+type FaceVerifyOptions = {
+	licenseId : string,
+	livenessSize : Int,
+	timeDetectModule : Int,
+	zzId : string,
+	cid : string,
+	success : (response : FaceVerifyResponse) => void;
+};
+
+type FaceVerifyResponse = {
+	code : number,
+	reason : string
+}
+
+class MyZZCallback extends ZZCallback {
+
+	option : FaceVerifyOptions;
+
+	constructor(option : FaceVerifyOptions) {
+		super();
+		this.option = option
+	}
+
+	override  response(zzResponse : ZZResponse) : boolean {
+		let response : FaceVerifyResponse = {
+			code: zzResponse.code,
+			reason: zzResponse.reason
+		};
+		this.option.success(response);
+		return true;
+	}
+}
+
+export function faceLivenessAndVerify(faceVerifyOptions : FaceVerifyOptions) {
+	let zzFacade : ZZFacade = ZZFacadeBuilder.create(getAppContext());
+	let myZZCallback = new MyZZCallback(faceVerifyOptions);
+	zzFacade.verify(
+		faceVerifyOptions.licenseId,
+		faceVerifyOptions.livenessSize,
+		faceVerifyOptions.timeDetectModule,
+		faceVerifyOptions.zzId,
+		faceVerifyOptions.cid,
+		myZZCallback);
+}

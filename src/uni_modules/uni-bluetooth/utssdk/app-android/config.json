@@ -1,0 +1,32 @@
+{
+	"abis": [
+		"armeabi-v7a",
+		"arm64-v8a"
+	],
+	"dependencies": [{
+		"id": "com.google.android.material",
+		"source": "implementation 'com.google.android.material:material:1.4.0'"
+	}, {
+		"id": "androidx.constraintlayout",
+		"source": "implementation 'androidx.constraintlayout:constraintlayout:2.0.4'"
+	}, {
+		"id": "com.squareup.okhttp3",
+		"source": "implementation 'com.squareup.okhttp3:okhttp:3.11.0'"
+	}, {
+		"id": "com.squareup.okio",
+		"source": "implementation 'com.squareup.okio:okio:1.14.0'"
+	}, {
+		"id": "com.squareup.retrofit2",
+		"source": "implementation 'com.squareup.retrofit2:converter-gson:2.6.1'"
+	}, {
+		"id": "com.squareup.retrofit2",
+		"source": "implementation 'com.squareup.retrofit2:converter-scalars:2.6.1'"
+	}, {
+		"id": "com.squareup.retrofit2",
+		"source": "implementation 'com.squareup.retrofit2:retrofit:2.6.1'"
+	}, {
+		"id": "com.google.code.gson",
+		"source": "implementation 'com.google.code.gson:gson:2.8.5'"
+	}],
+	"minSdkVersion": 19
+}

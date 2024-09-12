@@ -1,0 +1,15 @@
+export const wenzhouCityList = [
+  { text: "温州市辖区", value: "330301" },
+  { text: "鹿城区", value: "330302" },
+  { text: "龙湾区", value: "330303" },
+  { text: "瓯海区", value: "330304" },
+  { text: "洞头区", value: "330305" },
+  { text: "永嘉县", value: "330324" },
+  { text: "平阳县", value: "330326" },
+  { text: "苍南县", value: "330327" },
+  { text: "文成县", value: "330328" },
+  { text: "泰顺县", value: "330329" },
+  { text: "瑞安市", value: "330381" },
+  { text: "乐清市", value: "330382" },
+  { text: "龙港市", value: "330383" },
+];

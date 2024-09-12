@@ -1,11 +1,34 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     },
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "types": [
+      //https://www.npmjs.com/package/@dcloudio/types uni-app 类型提示
+      "@dcloudio/types",
+      //https://www.npmjs.com/package/@mini-types/alipay   支付宝小程序定义文件
+      "@mini-types/alipay",
+      //https://www.npmjs.com/package/miniprogram-api-typings 微信小程序定义文件 官方  取代@types/wechat-miniprogram
+      "miniprogram-api-typings",
+      //https://www.npmjs.com/package/@uni-helper/uni-types 为 uni-app 组件、uni-ui 组件和 uni-cloud 组件提供 TypeScript 类型
+      "@uni-helper/uni-types",
+      //https://uiadmin.net/uview-plus/components/npmSetting.html
+      "uview-plus/types"
+    ],
+    "sourceMap": true,
+    "noImplicitAny": false
+  },
+  "vueCompilerOptions": {
+    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
   ]
 }
